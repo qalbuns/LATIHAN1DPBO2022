@@ -3,14 +3,14 @@
 class mahasiswa
 {
 	//properti
-	private $nim;
-	private $nama;
-	private $jenis_kelamin;
-    private $program_studi;
-    private $semester;
+	private $nim = 0;
+	private $nama = 0;
+	private $jenis_kelamin = 0;
+    private $program_studi = 0;
+    private $semester = 0;
 
     
-	public function __construct($nim, $nama, $jenis_kelamin, $program_studi, $semester){
+	public function __construct($nim = 0, $nama = 0, $jenis_kelamin = 0, $program_studi = 0, $semester = 0){
 		$this->nim = $nim;
 		$this->nama = $nama;
 		$this->jenis_kelamin = $jenis_kelamin;
@@ -58,14 +58,24 @@ class mahasiswa
 		return $this->semester;
 	}
 	
-	#fungsi untuk menampilkan data mahasiswa
-	function display(){
+	#fungsi untuk menampilkan data mahasiswa 
+	#menggunakan get
+	function display1(){
 		echo "Nim : ", $this->nim ."<br>";
 		echo "Nama : ", $this->nama ."<br>";
 		echo "Jenis Kelamin : ", $this->jenis_kelamin ."<br>";
 		echo "Program Studi : ", $this->program_studi ."<br>";
 		echo "Semester : ", $this->semester ."<br><br>";
 	}
-}
 
+	#menggunakan set
+	function display2(){
+	$mahasiswa3 = new mahasiswa(2001299, "Naila Pratiwi", "Perempuan", "Kimia", 4);
+		echo "Nim : ", $mahasiswa3->getNim() ."<br>";
+		echo "Nama : ", $mahasiswa3->getNama() ."<br>";
+		echo "Jenis Kelamin : ", $mahasiswa3->getJk() ."<br>";
+		echo "Program Studi : ", $mahasiswa3->getPs() ."<br>";
+		echo "Semester : ", $mahasiswa3->getSemester() ."<br><br>";	
+	}
+}
 ?>
