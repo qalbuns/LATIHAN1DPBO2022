@@ -1,14 +1,20 @@
 <?php
 include "mahasiswa.php";
 
-	#objek
-	$mahasiswa1 = new mahasiswa(1904335, "Qalbu Natasya Salsabila", "Perempuan", "Ilmu Komputer", 6);
-	$mahasiswa1->display();
+	#menggunakan set
+	$mahasiswa1 = new mahasiswa();
+	$mahasiswa1->setNim(1904335);
+	$mahasiswa1->setNama("Qalbu Natasya Salsabila");
+	$mahasiswa1->setJk("Perempuan");
+	$mahasiswa1->setPs("Ilmu Komputer");
+	$mahasiswa1->setSemester(6);
+	
+	$mahasiswa1->display1();
 
 	$mahasiswa2 = new mahasiswa(1801199, "Muhammad Sadam", "Laki-laki", "Pendidikan Olahraga", 8);
-	$mahasiswa2->display();
+	$mahasiswa2->display1();
 
-	$mahasiswa3 = new mahasiswa(2001299, "Naila Pratiwi", "Perempuan", "Kimia", 4);
-	$mahasiswa3->display();
-
+	#menggunakan get
+	$mahasiswa3 = new mahasiswa();
+	$mahasiswa3->display2();
 ?>
