@@ -3,13 +3,13 @@
 class sepakbola
 {
 	//properti
-	private $nama;
-	private $negara;
-	private $tahun;
-    private $pemain;
+	private $nama = 0;
+	private $negara = 0;
+	private $tahun = 0;
+    private $pemain = 0;
 
     
-	public function __construct($nama, $negara, $tahun, $pemain){
+	public function __construct($nama = 0, $negara = 0, $tahun = 0, $pemain = 0){
 		$this->nama = $nama;
 		$this->negara= $negara;
 		$this->tahun = $tahun;
@@ -47,13 +47,13 @@ class sepakbola
 	public function getPemain(){
 		return $this->pemain;
 	}
-	
+
 	#fungsi untuk menampilkan data mahasiswa
 	function display(){
 		echo "Nama Tim : ", $this->nama ."<br>";
 		echo "Asal Negara : ", $this->negara ."<br>";
 		echo "Tahun Berdiri : ", $this->tahun ."<br>";
-		echo "Pemain : ", $this->pemain ."<br>"; #array
+		echo "Pemain : " ."<br>";
 	}
 }
 
